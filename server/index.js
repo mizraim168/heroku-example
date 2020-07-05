@@ -15,8 +15,8 @@ app.use(express.json());
 //app.use('/users',require('./routes/users.routes'));
 app.get('/', function(req,res){
     res.send("Hello world")
-})
+});
 //Server listen
-app.listen(3000, ()=> {
+app.listen(process.env.PORT, ()=> {
     console.log("Server On Port ", app.get('port'))
 });
