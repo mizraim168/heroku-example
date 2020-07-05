@@ -20,7 +20,7 @@ userController.getUser = async (req, res) =>{
 // Create User Method: (POST)
 userController.postUser = async (req, res) =>{
     const {user_id, username, password, email} = req.body;
-    const response = await pool.query('INSERT INTO users (username, password, email) VALUES ($1, $2, $3, $4)', [user_id, username, password, email]);
+    const response = await pool.query('INSERT INTO users (user_id, username, password, email) VALUES ($1, $2, $3, $4)', [user_id, username, password, email]);
     console.log(response);
     res.json({
         Message: 'OK',
