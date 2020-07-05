@@ -12,11 +12,18 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //Routes
-//app.use('/users',require('./routes/users.routes'));
-app.get('/', function(req,res){
-    res.send("Hello world")
-});
+app.use('/users',require('./routes/users.routes'));
+// app.get('/', function(req,res){
+//     res.send("Hello world")
+// });
 //Server listen
 app.listen(process.env.PORT, ()=> {
     console.log("Server On Port ", app.get('port'))
 });
+
+
+//MIZRA DEL FUTURO PON ESTO YA QUE EL MIZRA DEL PASADO ES UN COMPLETO ESTUPIDO XD
+
+// app.listen(process.env.PORT, ()=> {
+//     console.log("Server On Port ", app.get('port'))
+// });
