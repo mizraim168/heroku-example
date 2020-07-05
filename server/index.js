@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //Routes
-app.use('/users',require('./routes/users.routes'));
+//app.use('/users',require('./routes/users.routes'));
 app.get('/', function(req,res){
     res.send("Hello world")
 })
